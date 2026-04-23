@@ -118,7 +118,7 @@
             // 
             textBox3.Location = new Point(572, 330);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 23);
+            textBox3.Size = new Size(175, 23);
             textBox3.TabIndex = 17;
             // 
             // maskedTextBox3
@@ -152,14 +152,14 @@
             // 
             textBox2.Location = new Point(572, 264);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 23);
+            textBox2.Size = new Size(230, 23);
             textBox2.TabIndex = 13;
             // 
             // textBox1
             // 
             textBox1.Location = new Point(572, 8);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 23);
+            textBox1.Size = new Size(230, 23);
             textBox1.TabIndex = 12;
             // 
             // button1
@@ -256,7 +256,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(723, 455);
+            ClientSize = new Size(890, 455);
             Controls.Add(dtgDados);
             Controls.Add(button2);
             Controls.Add(label7);
@@ -274,6 +274,7 @@
             Controls.Add(maskedTextBox1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            MinimizeBox = false;
             Name = "F_Atualizar";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Atualizar Dados";

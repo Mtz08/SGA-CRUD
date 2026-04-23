@@ -59,7 +59,7 @@ namespace SGA
                     conexao.Open();
                     MySqlCommand cmd = new MySqlCommand(sql, conexao);
                     cmd.Parameters.AddWithValue("@matricula", Convert.ToInt32(textBox4.Text));
-					cmd.ExecuteNonQuery();                                                                    
+					cmd.ExecuteNonQuery();                                                            
 
 					MessageBox.Show("Aluno deletado!");
                 }

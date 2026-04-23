@@ -142,7 +142,9 @@
             Controls.Add(label7);
             Controls.Add(textBox4);
             Controls.Add(btnBuscar);
+            MaximizeBox = false;
             Name = "F_Excluir";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Excluir Aluno";
             ((System.ComponentModel.ISupportInitialize)dtgDados).EndInit();
             ResumeLayout(false);

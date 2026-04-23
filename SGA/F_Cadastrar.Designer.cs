@@ -45,22 +45,22 @@
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(269, 27);
+            textBox1.Location = new Point(198, 37);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 23);
+            textBox1.Size = new Size(242, 23);
             textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(269, 283);
+            textBox2.Location = new Point(198, 293);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 23);
+            textBox2.Size = new Size(242, 23);
             textBox2.TabIndex = 1;
             // 
             // maskedTextBox1
             // 
             maskedTextBox1.Font = new Font("Consolas", 9F);
-            maskedTextBox1.Location = new Point(269, 90);
+            maskedTextBox1.Location = new Point(198, 100);
             maskedTextBox1.Mask = "(00)00000-0000";
             maskedTextBox1.Name = "maskedTextBox1";
             maskedTextBox1.Size = new Size(125, 22);
@@ -69,7 +69,7 @@
             // maskedTextBox2
             // 
             maskedTextBox2.Font = new Font("Consolas", 9F);
-            maskedTextBox2.Location = new Point(269, 150);
+            maskedTextBox2.Location = new Point(198, 160);
             maskedTextBox2.Mask = "00/00/0000";
             maskedTextBox2.Name = "maskedTextBox2";
             maskedTextBox2.Size = new Size(125, 22);
@@ -78,7 +78,7 @@
             // maskedTextBox3
             // 
             maskedTextBox3.Font = new Font("Consolas", 9F);
-            maskedTextBox3.Location = new Point(269, 217);
+            maskedTextBox3.Location = new Point(198, 227);
             maskedTextBox3.Mask = "000\\.000\\.000-00";
             maskedTextBox3.Name = "maskedTextBox3";
             maskedTextBox3.Size = new Size(125, 22);
@@ -86,16 +86,16 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(269, 349);
+            textBox3.Location = new Point(198, 359);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(125, 23);
+            textBox3.Size = new Size(242, 23);
             textBox3.TabIndex = 5;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label1.Location = new Point(137, 28);
+            label1.Location = new Point(66, 40);
             label1.Name = "label1";
             label1.Size = new Size(113, 17);
             label1.TabIndex = 6;
@@ -105,7 +105,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label2.Location = new Point(181, 90);
+            label2.Location = new Point(110, 102);
             label2.Name = "label2";
             label2.Size = new Size(65, 17);
             label2.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label3.Location = new Point(119, 150);
+            label3.Location = new Point(38, 162);
             label3.Name = "label3";
             label3.Size = new Size(137, 17);
             label3.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label4.Location = new Point(205, 217);
+            label4.Location = new Point(139, 229);
             label4.Name = "label4";
             label4.Size = new Size(35, 17);
             label4.TabIndex = 9;
@@ -135,7 +135,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label5.Location = new Point(177, 284);
+            label5.Location = new Point(106, 296);
             label5.Name = "label5";
             label5.Size = new Size(68, 17);
             label5.TabIndex = 10;
@@ -145,7 +145,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            label6.Location = new Point(192, 350);
+            label6.Location = new Point(121, 362);
             label6.Name = "label6";
             label6.Size = new Size(51, 17);
             label6.TabIndex = 11;
@@ -155,9 +155,9 @@
             // 
             btnCadastrar.BackColor = Color.LimeGreen;
             btnCadastrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCadastrar.Location = new Point(483, 338);
+            btnCadastrar.Location = new Point(548, 345);
             btnCadastrar.Name = "btnCadastrar";
-            btnCadastrar.Size = new Size(118, 42);
+            btnCadastrar.Size = new Size(157, 42);
             btnCadastrar.TabIndex = 12;
             btnCadastrar.Text = "CADASTRAR";
             btnCadastrar.UseVisualStyleBackColor = false;
@@ -168,7 +168,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightGray;
-            ClientSize = new Size(665, 418);
+            ClientSize = new Size(750, 418);
             Controls.Add(btnCadastrar);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -182,6 +182,8 @@
             Controls.Add(maskedTextBox1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "F_Cadastrar";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "CADASTRAR";
