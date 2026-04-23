@@ -1,0 +1,99 @@
+//
+// incluir 
+//
+
+using PdfSharp.Drawing;
+using PdfSharp.Pdf;
+using System.Drawing.Imaging;
+
+
+
+//
+// exportar tela completa
+//
+
+
+
+private void ExportarTelaParaPDF()
+{
+    using (Bitmap bitmap = new Bitmap(this.Width, this.Height))
+    {
+        this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+
+        PdfDocument doc = new PdfDocument();
+        PdfPage page = doc.AddPage();
+
+        page.Width = XUnit.FromPoint(this.Width);
+        page.Height = XUnit.FromPoint(this.Height);
+
+
+        using (XGraphics gfx = XGraphics.FromPdfPage(page))
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                bitmap.Save(ms, ImageFormat.Png);
+                XImage imagem = XImage.FromStream(ms);
+
+                gfx.DrawImage(imagem, 0, 0, page.Width, page.Height);
+            }
+        }
+
+        SaveFileDialog sfd = new SaveFileDialog { Filter = "PDF|*.pdf", Title = "Exportar Tela" };
+        if (sfd.ShowDialog() == DialogResult.OK)
+        {
+            doc.Save(sfd.FileName);
+            MessageBox.Show("ExportaÃ§Ã£o concluÃ­da!", "Exportar");
+        }
+    }
+}
+
+
+
+//
+// exportar a tela de um form
+//
+
+
+private void ExportarFormParaPDF()
+{
+    Form formularioAtivo = this.ActiveMdiChild;
+
+    if (formularioAtivo == null)
+    {
+        MessageBox.Show("NÃ£o hÃ¡ janela aberta para exportar!", "Aviso");
+        return;
+    }
+
+    using (Bitmap bitmap = new Bitmap(formularioAtivo.Width, formularioAtivo.Height))
+    {
+        formularioAtivo.DrawToBitmap(bitmap, new Rectangle(0, 0, formularioAtivo.Width, formularioAtivo.Height));
+
+        PdfDocument doc = new PdfDocument();
+        PdfPage page = doc.AddPage();
+
+        page.Width = XUnit.FromPoint(formularioAtivo.Width);
+        page.Height = XUnit.FromPoint(formularioAtivo.Height);
+
+        using (XGraphics gfx = XGraphics.FromPdfPage(page))
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                bitmap.Save(ms, ImageFormat.Png);
+                XImage imagem = XImage.FromStream(ms);
+                gfx.DrawImage(imagem, 0, 0, page.Width, page.Height);
+            }
+        }
+
+        SaveFileDialog sfd = new SaveFileDialog
+        {
+            Filter = "PDF|*.pdf",
+            Title = "Exportar",
+            FileName = formularioAtivo.Text
+        };
+
+        if (sfd.ShowDialog() == DialogResult.OK)
+        {
+            doc.Save(sfd.FileName);
+            MessageBox.Show($"O formulÃ¡rio '{formularioAtivo.Text}' foi exportado!");
+        }
+    }
